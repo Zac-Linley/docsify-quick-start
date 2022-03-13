@@ -33,3 +33,11 @@
 [<svg class="iconsidebar" aria-hidden="true">
     <use xlink:href="#icon-envelope"></use>
 </svg> zac.linley@outlook.com](mailto:zac.linley@outlook.com)
+
+
+```mermaid
+graph LR
+    A --- B
+    B-->C[fa:fa-ban forbidden]
+    B-->D(fa:fa-spinner);
+```

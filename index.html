@@ -172,21 +172,6 @@
       // cornerExternalLinkTarget: '_self', //右上角链接的打开方式，'_blank'在新窗口打开
       // topMargin: 90, //浏览文档时保持页面顶部有一定空间 default: 0
 
-      // mermaid插件
-      plugins: [
-        function (hook, vm) {
-          hook.ready(function () {
-            // 类似 jQuery.ready 初始化 mermaid, 禁用自动渲染
-            mermaid.initialize({
-              startOnLoad: false
-            });
-          });
-          hook.doneEach(function () {
-            // 每个页面渲染完成后手动渲染 mermaid 图表
-            mermaid.init(undefined, '.mermaid');
-          });
-        }
-      ],
       markdown: {
         renderer: {
           code: function (code, lang) {
@@ -292,6 +277,10 @@
   <script src="//unpkg.com/docsify-glossary/dist/docsify-glossary.min.js"></script>
   <!-- 图片缩放 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- mermaid -->
+  <script src="//unpkg.com/mermaid/dist/mermaid.js"></script>
+  <script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true });</script>
 </body>
 
 </html>
